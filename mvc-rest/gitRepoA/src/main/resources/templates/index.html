@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Git Repository Mining</title>
+    <style>
+        h1{text-align: center;}
+        div{padding-left:250px;}
+    </style>
+</head>
+<body>
+<h1 name="title" >Git Repository Mining</h1>
+<!-- <form action=@"/" th:object="${dateDropdowns}" method="post"> -->
+<div class="quantity" th:text="Number of Contributers: ${authornums}">Number of Contributors</div>
+    <div>
+        <table border="1" style="width:800px">
+              <thead>
+               <tr class="headings">
+                   <td th:each="header: ${headers}" th:text="${header}"> </td>
+               </tr>
+             </thead>
+             <tbody>
+             <tr th:each="c: ${Commit}">
+                 <td th:text="${c.time}"></td>
+                 <td th:text="${c.commit}"></td>
+                 <td th:text="${c.author}"></td>
+                 <td th:text="${c.file}"></td>
+                 <td th:text="${c.insertions}"></td>
+                 <td th:text="${c.deletions}"></td>
+             </tr>
+             </tbody>
+         </table>
+     </div>
+ <!-- </form> -->
+</body>
+

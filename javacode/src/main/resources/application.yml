@@ -1,0 +1,4 @@
+resources:
+    db: H2
+    logs: C:\temp\logs\
+    secure: false

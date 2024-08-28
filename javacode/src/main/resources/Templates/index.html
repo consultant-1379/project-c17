@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Git Repository Mining</title>
+    <style>
+    h1{text-align: center;}
+   
+</style>
+</head>
+<body>
+
+<h1 name="title" >Git Repository Mining</h1>
+<div>
+
+    <table  border="1" style="width:300px">
+        <tr>
+            <td name="time">Time</td>
+            <td name="message">Message</td>
+            <td name="file">File</td>
+        </tr>
+        <tr>
+            <td th:text="${ftime}" /></td>
+            <td th:text="${fmsg}" /></td>
+            <td th:text="${fname}" /></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
